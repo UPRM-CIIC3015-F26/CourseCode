@@ -1,7 +1,7 @@
 import turtle
 
 # Setup screen and turtle speed
-turtle.speed(10)
+turtle.speed(1)
 turtle.pensize(2)
 
 def draw_body():
