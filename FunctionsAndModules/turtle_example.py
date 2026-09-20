@@ -20,10 +20,10 @@ def draw_beak():
     turtle.penup()
     turtle.goto(65, 30)  # Move to the edge of the face
     turtle.pendown()
+    turtle.right(30)
     
     turtle.color("darkorange")
     turtle.begin_fill()
-    turtle.right(30)
     # 3 sides for the triangle
     turtle.forward(40)
     turtle.right(120)
