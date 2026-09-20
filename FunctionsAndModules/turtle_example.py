@@ -1,11 +1,11 @@
 import turtle
 
 # Setup screen and turtle speed
-turtle.speed(3)
+turtle.speed(10)
 turtle.pensize(2)
 
-# 1. Draw the Body (Circle)
 def draw_body():
+    """Draw the bird's body as a filled gold circle."""
     turtle.penup()
     turtle.goto(0, -50)  # Move down so the bird is centered
     turtle.pendown()
@@ -15,15 +15,15 @@ def draw_body():
     turtle.circle(70)    # Using the built-in circle function
     turtle.end_fill()
 
-# 2. Draw the Beak (Triangle using forward and turns)
 def draw_beak():
+    """Draw the bird's beak as a filled orange triangle."""
     turtle.penup()
-    turtle.goto(70, 20)  # Move to the edge of the face
+    turtle.goto(65, 30)  # Move to the edge of the face
     turtle.pendown()
     
     turtle.color("darkorange")
     turtle.begin_fill()
-    turtle.right(50)
+    turtle.right(30)
     # 3 sides for the triangle
     turtle.forward(40)
     turtle.right(120)
@@ -34,8 +34,8 @@ def draw_beak():
     turtle.end_fill()
     turtle.right(120) # Reset turtle direction
 
-# 3. Draw the Eye (Simple dot)
 def draw_eye():
+    """Draw the bird's eye as a simple black dot."""
     turtle.penup()
     turtle.goto(25, 45)  # Position eye above the beak
     turtle.pendown()
@@ -43,8 +43,8 @@ def draw_eye():
     turtle.color("black")
     turtle.dot(15)       # dot() is perfect for drawing eyes without math
 
-# The main method that pieces the problem together
 def draw_bird():
+    """Draw the complete bird by combining the body, beak, and eye."""
     draw_body()
     draw_beak()
     draw_eye()
