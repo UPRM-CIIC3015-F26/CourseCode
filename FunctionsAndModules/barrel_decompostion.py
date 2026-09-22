@@ -11,7 +11,7 @@ def calculate_lateral_area(radius, height):
     Returns:
         float: The lateral surface area in square feet.
     """
-    pass
+    return height * (2 * math.pi * radius)
 
 def calculate_lids_area(radius):
     """
@@ -23,7 +23,7 @@ def calculate_lids_area(radius):
     Returns:
         float: The total area of both circular lids in square feet.
     """
-    pass
+    return 2 * (math.pi * radius **2)
 
 def calculate_total_surface_area(radius, height):
     """
@@ -36,7 +36,7 @@ def calculate_total_surface_area(radius, height):
     Returns:
         float: The sum of the lateral area and both lids in square feet.
     """
-    pass
+    return calculate_lateral_area(radius, height) + calculate_lids_area(radius)
 
 def calculate_total_cost(radius, height, sq_ft_per_gallon, price_per_gallon):
     """
@@ -51,7 +51,9 @@ def calculate_total_cost(radius, height, sq_ft_per_gallon, price_per_gallon):
     Returns:
         float: The total calculated cost in dollars.
     """
-    pass
+    total_area = calculate_total_surface_area(radius, height)
+    total_cost = total_area / sq_ft_per_gallon * price_per_gallon
+    return total_cost
 
 # --- Example Usage  ---
 barrel_radius = 1.5
