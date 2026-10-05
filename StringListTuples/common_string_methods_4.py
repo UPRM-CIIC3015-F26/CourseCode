@@ -11,12 +11,13 @@ def count_vowels(text):
 print(f"Number of Vowels: {count_vowels(text)}")
 # Find position of first consonant position
 def find_first_consonant(text):
-    for index, char in enumerate(text):
+    for index in range(len(text)):
+        char = text[index]
         if char.isalpha() and char.lower() not in "aeiou":
             return index
     return -1
 
-print(f"First consonant position: {find_first_consonant('Anagram') }")
+print(f"First consonant position: {find_first_consonant(text) }")
 
 # Replace all occurrences of a letter by another letter
 replaced_letters = text.replace("e", "X")
