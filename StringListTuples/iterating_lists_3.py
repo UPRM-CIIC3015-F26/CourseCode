@@ -3,14 +3,19 @@ numbers = [10, -5, 20, -3, 15, 30]
 # Print all list elements and their positions (while, range and enumerate)
 
 def print_all_numbers_while(nums):
-    pass
+    index = 0
+    while index < len(nums):
+        print(nums[index])
+        index +=1
 
 def print_all_numbers_range(nums):
-    pass
+    for i in range(len(nums)):
+        print(nums[i])
 
 
-def print_all_numbers_enumerate(nums):
-    pass
+def print_all_numbers(nums):
+    for x in nums:
+        print(x)
 
 
 print_all_numbers_while(numbers)
@@ -18,12 +23,12 @@ print_all_numbers_while(numbers)
 print_all_numbers_range(numbers)
 
 
-print_all_numbers_enumerate(numbers)
+print_all_numbers(numbers)
 
 # Get total sum of numbers in a list
 
 def sum_numbers(nums):
-    pass
+    return sum(nums)
 
 print(f"Sum: {sum_numbers(numbers)}")
 
