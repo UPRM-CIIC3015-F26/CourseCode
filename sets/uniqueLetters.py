@@ -1,5 +1,8 @@
 def find_unique_letters(word):
-    pass
+    letters = set()
+    for c in word:
+        letters.add(c)
+    return letters
 
 
 word = input("Enter a word: ")
