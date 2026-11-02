@@ -1,0 +1,5 @@
+volume = 75
+shuffle = no
+fadein = 0
+fadeout = 0
+crossfade = 5
