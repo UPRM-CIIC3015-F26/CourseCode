@@ -13,8 +13,13 @@ def isPalindromShowingOff(s: str) -> bool:
     return s == s[::-1]
 
 def recIsPalindrom(s: str) -> list:
-    pass
+    if len(s) <= 1:
+        return True
+    if s[0] == s[-1]:
+        return recIsPalindrom(s[1:len(s)-1])
+    return False
 
-word = "kayak"
+word = "aabaa"
 print(f"Is \"{word}\" a palindrom? {isPalindrom(word)}")
 print(f"Is \"{word}\" a palindrom? {isPalindromShowingOff(word)}")
+print(f"Is \"{word}\" a palindrom? {recIsPalindrom(word)}")

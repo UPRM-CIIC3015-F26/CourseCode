@@ -25,4 +25,9 @@ def printList(node: Node):
     """"
     Print the data in a linked list starting from the given node.
     """
-    
+    if node != None:
+        print(node.data)
+        printList(node.next)
+
+head = Node("A", Node("B", Node("C", Node("D"))))
+printList(head)

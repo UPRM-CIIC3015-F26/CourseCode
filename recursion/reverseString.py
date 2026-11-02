@@ -8,7 +8,11 @@ def reverse_str(s):
     Returns:
         str: The reversed string.
     """
+    if len(s) <= 1:
+        return s
+    else:
+        return reverse_str(s[1:]) + s[0]
     
 
-name = "Gretchen"
+name = "cat"
 print(f"The word {name} when reversed is {reverse_str(name)}")

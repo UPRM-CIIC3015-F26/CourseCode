@@ -9,4 +9,10 @@ def rangedSum(nums: list, start: int, end: int) -> int:
     return sum
 
 def recRangedSum(nums: list, start: int, end: int) -> int:
-    pass
+    if start > end:
+        return 0
+    else:
+        return recRangedSum(nums, start + 1, end) + nums[start]
+
+L = [1, 2, 3, 4, 5]
+print(recRangedSum(L, 2, 3))
