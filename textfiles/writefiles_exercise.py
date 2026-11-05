@@ -44,6 +44,6 @@ def do_update():
         contents = f.read()
         print(contents)
 
-# write_ingredients()
+#write_ingredients()
 # configurations()
-# do_update()
+do_update()

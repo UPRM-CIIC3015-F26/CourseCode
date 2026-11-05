@@ -11,7 +11,11 @@ def get_indexes_for_min_level_standard(levels, min_level):
 
 def get_indexes_for_min_level_enumerate(levels, min_level):
     # Use enumerate
-    pass
+    indexes = []
+    for i, level in enumerate(levels):
+        if level >= min_level:
+            indexes.append(i)
+    return indexes
 
 
 
@@ -27,7 +31,10 @@ def dict_from_keys_and_values_standard(keys, values):
     return result
 
 def dict_from_keys_and_values_items(keys, values):
-    pass
+    result = {}
+    for k, v in zip(keys, values):
+        result[k] = v
+    return result
 
 print(dict_from_keys_and_values_standard(["A","B", "C"], [1,2,3]))
 print(dict_from_keys_and_values_standard(["A","B", "C"], [1,2,3]))
@@ -45,7 +52,17 @@ def frequency_standard(sentence):
     return counts
 
 def frequency_get(sentence):
-    pass
+    sentence = sentence.lower()
+    counts = {}
+    for char in sentence:
+        if char.isalpha():
+            counts[char] = counts.get(char, 0) + 1
+    return counts
 
+a = {"a":1, "b":2, "c":3}
+
+for k,v in a.items():
+    print(f"{k}:{v}")
+    
 print(frequency_standard("hello world"))
 print(frequency_get("hello world"))
