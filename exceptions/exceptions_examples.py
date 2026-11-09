@@ -27,14 +27,15 @@ else:
     print(data.read())
 
 
-
+file = None
 # Finally
 try:
     file = open('exceptions/grades.csv', 'r')
 except FileNotFoundError:
     print("File Missing.")
 finally:
-    file.close()
+    if f:
+        file.close()
 
 
 
