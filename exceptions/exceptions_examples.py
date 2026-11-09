@@ -1,6 +1,6 @@
 # Basic Try Catch
 try:
-    data = open('grades.csv', 'r')
+    data = open('exceptions/grades.csv', 'r')
     print("File Opened")
 except FileNotFoundError as e:
     print("Caught Error:", e.filename)
@@ -8,7 +8,7 @@ except FileNotFoundError as e:
 
 # Multiple exceptions.
 try:
-    data = open('multiple.txt', 'r')
+    data = open('exceptions/multiple.txt', 'r')
     score = int(data.read())
 except FileNotFoundError:
     print("File Missing.")
@@ -20,7 +20,7 @@ except ValueError:
 # Else statement
 
 try:
-    data = open('hello.txt', 'r')
+    data = open('exceptions/hello.txt', 'r')
 except FileNotFoundError:
     print("File Missing.")
 else:
@@ -30,7 +30,7 @@ else:
 
 # Finally
 try:
-    file = open('grades.csv', 'r')
+    file = open('exceptions/grades.csv', 'r')
 except FileNotFoundError:
     print("File Missing.")
 finally:
