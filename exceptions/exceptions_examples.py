@@ -34,7 +34,7 @@ try:
 except FileNotFoundError:
     print("File Missing.")
 finally:
-    if f:
+    if file:
         file.close()
 
 
