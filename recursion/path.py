@@ -1,4 +1,7 @@
 def get_path(start: int) -> list:
+    """
+    G
+    """
     results = []
     getPathHelper(start, results)
     return results
