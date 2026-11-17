@@ -50,4 +50,4 @@ def cleanup_data():
 
 #print(restock_check())
 
-#cleanup_data()
+cleanup_data()

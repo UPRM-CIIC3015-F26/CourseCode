@@ -47,4 +47,4 @@ def find_best_sellers(filename, restock_threshold):
 #print_all_rows()
 #print_keys()
 #print(pepper_names())
-#print(find_best_sellers("csvfiles/pepper_inventory.csv",  25))
+print(find_best_sellers("csvfiles/pepper_inventory.csv",  25))
