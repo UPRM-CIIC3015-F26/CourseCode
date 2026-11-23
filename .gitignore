@@ -1,2 +1,11 @@
 .DS_Store
 test
+.env
+
+# Environments
+penv/
+.penv/
+venv/
+.venv/
+env/
+
